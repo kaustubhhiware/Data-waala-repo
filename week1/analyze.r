@@ -24,27 +24,30 @@ read.tcsv = function(file, header=TRUE, sep=",", ...) {
   
 }
 
-getData <- function(path) {
-	table1 <- read.csv(path, header = T, sep=",");
-	table2 <- read.tcsv(path, header = T, sep=",");
-	
-	table1$mean <- round(rowMeans(table1[,-1],na.rm=TRUE),2);
-	table1$var <- round(rowVars(table1[,-1],na.rm=TRUE),2);
-	table1$stddev <- round(sqrt(table1$var),2);
-
-	table2$mean <- round(rowMeans(table2[,-1],na.rm=TRUE),2);
-	table2$var <- round(rowVars(table2[,-1],na.rm=TRUE),2);
-	table2$stddev <- round(sqrt(table2$var),2);
-
-	stud_medians <- median(table1$mean)#apply(table1,1,median,na.rm=TRUE);
-	sub_medians <- median(table2$mean);
-	print(stud_medians);
-	print(sub_medians);
-	write.table(table1[,-1], file = "students.csv", sep=",", row.names=F, col.names=T);
-	write.table(table2, file = "subjects.csv", sep=",", row.names=F, col.names=T);
-
+getData <- function(path,saveloc) {
+  table1 <- read.csv(path, header = T, sep=",");
+  table2 <- read.tcsv(path, header = T, sep=",");
+  
+  table1$mean <- round(rowMeans(table1[,-1],na.rm=TRUE),2);
+  table1$var <- round(rowVars(table1[,-1],na.rm=TRUE),2);
+  table1$stddev <- round(sqrt(table1$var),2);
+  
+  table2$mean <- round(rowMeans(table2[,-1],na.rm=TRUE),2);
+  table2$var <- round(rowVars(table2[,-1],na.rm=TRUE),2);
+  table2$stddev <- round(sqrt(table2$var),2);
+  
+  stud_medians <- median(table1$mean);#apply(table1,1,median,na.rm=TRUE);
+  sub_medians <- median(table2$mean);
+  print(saveloc);
+  print(paste0("Medians of means (students): ", stud_medians));#print(stud_medians);
+  print(paste0("Medians of means (subjects): ", sub_medians));
+  
+  dir.create(file.path( saveloc), showWarnings = TRUE)
+  write.table(table1[,-1], file = paste(saveloc,"students.csv",sep='/'), sep=",", row.names=F, col.names=T);
+  write.table(table2, file = paste(saveloc,"subjects.csv",sep='/'), sep=",", row.names=F, col.names=T);
+  
 }
 
-getData("Data1.csv");
-#getData("Data2.csv");
+getData("Data1.csv","Data1_out");
+getData("Data2.csv","Data2_out");
 
