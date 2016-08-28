@@ -12,6 +12,7 @@ Members :
 
 * 14CS30011 [Kaustubh Hiware](https://github.com/kaustubhhiware)
 * 14CS10037 [Charan Reddy](https://github.com/charan223)
+* 14CS30017 [Surya Midatala](https://github.com/kingofools)
 
 
 ## Submission
