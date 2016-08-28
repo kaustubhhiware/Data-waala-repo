@@ -1,6 +1,6 @@
 # Data-waala-repo
 
-Data analytics CS40003 code sharing repository
+Data analytics CS40003 code sharing repository for Group DA-02 .
 
 If you are here for the first time , add your name,roll number and github id link at the end as follows :
 
