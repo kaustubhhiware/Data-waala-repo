@@ -1,0 +1,31 @@
+﻿Report for PA04 
+Group DA-02
+
+
+Assumptions :
+* The ratio for training set to test set is kept at 9:1 currently . It can be changed on the line
+        
+// Purana waala hi hai , see what needs to be changed . spacing ka baad mein dekh lenge
+
+
+   1. Most of the code is self-explanatory.For binary decision tree, we are opting for rpart method. The output for one of the runs is stored in train.out, with plots saved in Rplots.pdf in the order they are executed. Note that the output may vary slightly each time since train and test sets are chosen arbitrarily.
+
+
+   1. Packages need to be preinstalled by running sudo R in terminal and then installing each package in churn.r with install.packages(‘package_name’)
+ 
+   1. In the problem statement, churn variable is false in majority cases and hence true negative value will be very high. However, we will not be changing the basic formulae as we are trying to develop a model to predict the customers to switch the company with sufficient accuracy. 
+ 
+   1. We then construct a correlation matrix to determine which repressor to downsize.Our approach for this is to determine which element in the matrix has mod closest to 1, since the contribution of that element’s row and column is almost equal , one of them can be removed.That is displayed accordingly.
+
+
+   1. The response (y)is still MEDV. As in the last part, say in one of the runs, corrtable[RAD][TAX] was found to be maximum , one of RAD or TAX has to be removed .To decide which one of these to be removed, we will remove RAD first and compute test R2  for  this data say x1 ,and then replace RAD and remove only TAX from the original data. And compute test R2  for this data say x2. We will see in which case R2 has increased and remove the corresponding repressor. For this task, we will have to define a neighborhood t, which will be a fraction of  test R2   value ; such that if computed R2 is within t of R2 , the difference is ignored and it is considered to be the same value. We shall do this until computed R2 is within the neighborhood of R2 . This will give us a right set of repressor variables.
+
+
+   1. Rick you write the part you said for optimisation , combining two vars and all that part.
+
+
+Gudepu Prithviraj Reddy        14CS10016
+Kinsuk Das                        14CS10025
+Ragireddy S. Charan Reddy        14CS10037
+Kaustubh Hiware                14CS30011
+Surya Midatala                14CS30017
