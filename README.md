@@ -1,6 +1,6 @@
 # Data-waala-repo
 
-Data analytics CS40003 code sharing repository for Group DA-02 .Don't have very high expectations from this repo. A lot of assignments were basic stuff.
+Data analytics CS40003 code sharing repository for Group DA-02 .
 
 Course [website](http://www.nid.iitkgp.ernet.in/dsamanta/courses/CS40003_2016/index.html)
 
