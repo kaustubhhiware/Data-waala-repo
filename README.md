@@ -1,28 +1,25 @@
 # Data-waala-repo
 
-Data analytics CS40003 code sharing repository for Group DA-02 .
+Data analytics CS40003 code sharing repository for Group DA-02 .Don't have very high expectations from this repo. A lot of assignments were basic stuff.
 
-If you are here for the first time , add your name,roll number and github id link at the end as follows :
+Course [website](http://www.nid.iitkgp.ernet.in/dsamanta/courses/CS40003_2016/index.html)
 
-Click on README.md , you'll see a small pencil icon , click on it.Then edit the README by adding your details.
+PA > Project assignments
+TA > Theory assignments
 
-Commit changes should be as (where Update README.md box is present) - Added name <FIRSTNAME>.
+Members :
 
-Members : 
+* [Prithvi Raj](https://github.com/prithviraj-gudepu)
+* [Charan Reddy](https://github.com/charan223)
+* [Kinsuk Das](https://github.com/blankRick)
+* [Kaustubh Hiware](https://github.com/kaustubhhiware)
+* [Surya Midatala](https://github.com/kingofools)
 
-* 14CS30011 [Kaustubh Hiware](https://github.com/kaustubhhiware)
-* 14CS10037 [Charan Reddy](https://github.com/charan223)
-* 14CS30017 [Surya Midatala](https://github.com/kingofools)
-* 14CS10016 [Prithvi Raj](https://github.com/prithviraj-gudepu)
 
+## Running the scripts
 
-## Submission
-
-The submission for week 1 is in week1/submission.Have a glance over it .For some reasons , the file does not compile in 
-RStudio , so run it via terminal.(Assuming you have set up R on ubuntu)
+See the report for each project in their respective folders.
 
 How to run the R script in ubuntu :
-`
-cd <location of submission folder>
-&& Rscript analyze.r
-`
+<pre style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px;">cd location_of_script
+Rscript analyze.r</pre>
